@@ -1,0 +1,62 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ArraysAndLists
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // arrays
+            // declaration
+            int[] a1 = new int[5];
+
+            // initialization and traversal
+            for(int i=0; i < a1.Length; i++)
+            {
+                a1[i] = (i * 10) + 1;
+            }
+
+            int[] a2 = { 1, 2, 3, 4, 5, };  // no new keyword with intialization syntax
+
+            // traversal
+            foreach (int element in a1)
+            {
+                Console.WriteLine(element);
+            }
+            Console.WriteLine();
+
+            // lists
+            // declaration
+            List<int> l = new List<int>(); // parens because you still need to call a constructor to build the object
+
+            // initialization
+            l.Add(1);
+            l.Add(2);
+            l.Add(3);
+
+            // element access
+            l[1] = 22;
+
+            // some other methods
+            l.Insert(2, 99);  // insert 99 at index of 2
+            l.Remove(1);  // remove item at index 1
+            l.Sort();
+
+            // traversal
+            for(int i=0; i<l.Count; i++)
+            {
+                Console.WriteLine(l[i]);
+            }
+            Console.WriteLine();
+
+            foreach(int element in l)
+            {
+                Console.WriteLine(element);
+            }
+        }
+    }
+}
